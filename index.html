@@ -1,0 +1,105 @@
+<html>
+    <body>
+        <h2>
+            Scale Data Science with Spark and R
+        </h2>
+
+        <p>
+            sparklyr is an open-source and modern interface to scale data science and machine learning workflows using Apache Spark™, R, and a rich extension ecosystem.
+        </p>
+        <p>
+            It enables using Apache Spark with ease using R by providing access to core functionality like installing, connecting and managing Spark and using Spark's MLlib, Spark Structured Streaming and Spark Pipelines from R.
+        </p>
+        <p>
+            Supports well-known R packages like dplyr, DBI and broom to reduce the cognitive overhead from having to re-learn libraries.
+        </p>
+        <p>
+            And enables a rich-ecosystem of extensions to use in Spark and R: XGBoost, MLeap, GraphFrames, H2O, and optionally enable Apache Arrow to significantly improve performance.
+        </p>
+        <p>
+            Through Spark, this allows you to scale your Data Science workflows in Hadoop YARN, Mesos, Kubernetes or Apache Livy.
+        </p>
+        <!-- source: https://docs.google.com/presentation/d/1VIC5XKOsOSYkoxakZ8w_IOG6TWNSoZMEYaY3nHg-8YQ/edit?usp=sharing -->
+        <img src="images/sparklyr-architecture.png" width="380">
+
+        <h2>
+            Getting started
+        </h2>
+        <p>
+            To connect to a local cluster: install R, Java 8, and run from R:
+        </p>
+        <pre>
+# Run once
+install.packages("sparklyr")
+sparklyr::spark_install()
+
+# Connect to Spark local
+library(sparklyr)
+sc <- spark_connect(master = "local")
+        </pre>
+        <p>
+            To connect to any other Spark clusters:
+        </p>
+        <pre>
+# Connect to Hadoop YARN
+sc <- spark_connect(master = "yarn")
+
+# Connect to Mesos
+sc <- spark_connect(master = "mesos://host:port")
+
+# Connect to Kubernetes
+sc <- spark_connect(master = "k8s://https://server")
+
+# Connect to Apache Livy
+sc <- spark_connect(master = "http://server/livy", method = "lvy")
+        </pre>
+        <p>
+            To connect through specific distributions, cloud providers and tools start use the following resources:
+        </p>
+        <ul>
+            <li><a href="https://aws.amazon.com/blogs/big-data/running-sparklyr-rstudios-r-interface-to-spark-on-amazon-emr/">Amazon AWS</a></li>
+            <li><a href="https://blog.cloudera.com/?s=sparklyr">Cloudera</a></li>
+            <li><a href="https://docs.databricks.com/spark/latest/sparkr/sparklyr.html">Databricks</a></li>
+            <li><a href="https://cloud.google.com/s/results/?q=sparklyr">Google</a></li>
+            <li><a href="https://www.ibm.com/search?q=sparklyr">IBM</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/azure/databricks/spark/latest/sparkr/sparklyr">Microsoft</a></li>
+            <li><a href="https://www.qubole.com/blog/using-rstudio-to-train-ml-models-with-qubole-spark-at-production-scale/">Qubole</a></li>
+            <li><a href="https://spark.rstudio.com">RStudio</a></li>
+        </ul>
+        <h2>Learning</h2>
+        <p>
+            Useful resources to learn sparklyr:
+        </p>
+        <a href="https://therinspark.com">
+            <img src="images/sparklyr-book.png" width="220">
+        </a>
+        <a href="https://spark.rstudio.com">
+            <img src="images/sparklyr-docs.png" width="220">
+        </a>
+
+        <h2>
+            Users
+        </h2>
+        <p>
+            There are many organizations using sparklyr to scale their Data Science and Machine Learning frameworks using R with Apache Spark. Logos coming soon!
+        </p>
+
+        <h2>
+            Sponsors
+        </h2>
+        <p>
+            Current committers to sparklyr are sponsored by: Databricks, Qubole, and RStudio.
+        </p>
+
+        <h2>
+            Community
+        </h2>
+        <ul>
+            <li><a href="https://community.rstudio.com/tags/sparklyr">Forum</a></li>
+            <li><a href="https://stackoverflow.com/search?q=sparklyr">StackOverflow</a></li>
+            <li><a href="https://twitter.com/DeltaLakeOSS">Twitter</a></li>
+            <li><a href="https://github.com/sparklyr/sparklyr">GitHub</a></li>
+            <li><a href="https://twitter.com/search?q=sparklyr">Gitter</a></li>
+        </ul>
+    </body>
+</html>
